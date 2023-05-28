@@ -43,7 +43,6 @@ require (
 	golang.org/x/net v0.8.0
 	golang.org/x/text v0.9.0
 	golang.org/x/tools v0.7.0
-	gopkg.in/telebot.v3 v3.1.3
 	gopkg.in/yaml.v2 v2.4.0
 )
 
@@ -75,6 +74,7 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
+	github.com/p9os/telebot v0.0.0-20230528103117-571cb09e56aa // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/procfs v0.9.0 // indirect

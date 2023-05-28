@@ -22,8 +22,8 @@ import (
 
 	"github.com/go-kit/log"
 	"github.com/go-kit/log/level"
+	"github.com/p9os/telebot"
 	commoncfg "github.com/prometheus/common/config"
-	"gopkg.in/telebot.v3"
 
 	"github.com/prometheus/alertmanager/config"
 	"github.com/prometheus/alertmanager/notify"
@@ -93,6 +93,7 @@ func (n *Notifier) Notify(ctx context.Context, alert ...*types.Alert) (bool, err
 	message, err := n.client.Send(telebot.ChatID(n.conf.ChatID), messageText, &telebot.SendOptions{
 		DisableNotification:   n.conf.DisableNotifications,
 		DisableWebPagePreview: true,
+		ThreadID:              telebot.ThreadID(n.conf.ThreadID),
 	})
 	if err != nil {
 		return true, err
